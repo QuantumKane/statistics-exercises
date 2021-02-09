@@ -59,7 +59,15 @@ p_tarts.mean()
 
 # 5. Compare Heights: Men have an average height of 178 cm and standard deviation of 8cm. Women have a mean of 170, sd = 6cm. If a man and woman are chosen at random, P(woman taller than man)?
 
+men_avg = 178
+men_std = 8
+wmn_avg = 170
+wmn_std = 6
 
+s_men = np.random.normal(men_avg, men_std, 100_000)
+s_wmn = np.random.normal(wmn_avg, wmn_std, 100_000)
+
+probabilty = (s_wmn > s_men).mean()
 
 # 6. When installing anaconda on a student's computer, there's a 1 in 250 chance that the download is corrupted and the installation fails. What are the odds that after having 50 students download anaconda, no one has an installation issue? 
 
