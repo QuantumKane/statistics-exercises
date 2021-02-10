@@ -67,7 +67,8 @@ wmn_std = 6
 s_men = np.random.normal(men_avg, men_std, 100_000)
 s_wmn = np.random.normal(wmn_avg, wmn_std, 100_000)
 
-probabilty = (s_wmn > s_men).mean()
+prob = (s_wmn > s_men).mean()
+prob
 
 # 6. When installing anaconda on a student's computer, there's a 1 in 250 chance that the download is corrupted and the installation fails. What are the odds that after having 50 students download anaconda, no one has an installation issue? 
 
