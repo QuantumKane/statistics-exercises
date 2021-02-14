@@ -108,12 +108,19 @@ x = np.arange(0,9)
 y = stats.binom(n, p).pmf(x)
 plt.bar(x,y, width = 0.9)
 plt.xlabel('Number of times area is cleaned per day')
+
+
 # 6 You want to get lunch at La Panaderia, but notice that the line is usually very long at lunchtime. After several weeks of careful observation, you notice that the average number of people in line when your lunch break starts is normally distributed with a mean of 15 and standard deviation of 3. If it takes 2 minutes for each person to order, and 10 minutes from ordering to getting your food, what is the likelihood that you have at least 15 minutes left to eat your food before you have to go back to class? Assume you have one hour for lunch, and ignore travel time to and from La Panaderia.
 
 mean = 30
 sd = 6
 
 stats.norm(mean, sd).cdf(35)
+
+
+# simulation
+(np.random.normal(30, 6, 100_000) < 35).mean()
+
 
 # 7 Connect to the employees database and find the average salary of current employees, along with the standard deviation. For the following questions, calculate the answer based on modeling the employees salaries with a normal distribution defined by the calculated mean and standard deviation then compare this answer to the actual values present in the salaries dataset.
 # What percent of employees earn less than 60,000?
